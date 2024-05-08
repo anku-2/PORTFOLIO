@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+  
+  </style>
+  <title>Ankush Nikam</title>
+</head>
+<body>
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a class_name="Home">Portfolio </a></div>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check" />
+      <ul>
+        <li><a href="#" onclick="showInfo('home')">Home</a></li>
+        <li><a href="#" onclick="showInfo('skill')">Skills</a></li>
+        <li><a href="#" onclick="showInfo('project')">Projects</a></li>
+        <li><a href="#" onclick="showInfo('education')">Education</a></li>
+        <li><a href="#" onclick="showInfo('certification')">Certification</a></li>
+        <li><a href="#" onclick="showInfo('contact')">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="section">
+    <div class="section__container">
+      <div class="content" id="infoContainer">
+      
+      </div>
+      <div class="image">
+        <img src="img.jpg" alt="profile" />
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function showInfo(section) {
+      let info;
+      switch (section) {
+        case 'home':
+          info = `
+            <p class="subtitle">HELLO</p>
+            <h1 class="title">
+              I'm <span>Ankush Nikam<br> a Web Developer<br /></span> 
+            </h1>
+            <p class="description">
+              Experienced web developer with a strong background in designing, developing, and maintaining responsive websites. Proficient in front-end technologies such as HTML5, CSS3, JavaScript, and frameworks like Bootstrap and jQuery. Skilled in back-end development using languages like PHP and Python, along with database management using MySQL and MongoDB. Demonstrated expertise in creating dynamic web applications, implementing SEO best practices, and ensuring cross-browser compatibility. Experienced in version control systems like Git and continuous integration tools such as Jenkins. Proven ability to work collaboratively in agile environments, delivering high-quality solutions that meet client requirements and business objectives.
+            </p>
+            <div class="action__btns">
+              <button class="hire__me">Hire Me</button>
+              <button class="portfolio">Portfolio</button>
+            </div>
+          `;
+          break;
+       
+        case 'skill':
+          info = `
+            <h2>Skills</h2>
+            <ul>
+              <li>Proficient in HTML, CSS, JavaScript, React, Node.js</li><br>
+              <li>Experienced with front-end frameworks like Angular and Vue.js</li><br>
+              <li>Familiar with version control systems such as Git and SVN</li><br>
+              <li>Skilled in responsive design and cross-browser compatibility</li><br>
+              <li>Knowledgeable in web performance optimization techniques</li><br>
+              <li>Strong problem-solving and debugging skills </li><br>
+              
+            </ul>
+          `;
+          break;
+          case 'project':
+  info = `
+    <h2>Projects</h2>
+    <h3>1) PORTFOLIO WEBSITE :</h3>
+    <ol>
+      <li>
+        •	Developed a personal portfolio website showcasing skills, projects, and contact information.
+        •	Implemented responsive design using media queries and Flexbox for optimal viewing on all devices.
+        •	Integrated a contact form with backend processing using Node.js and Express.
+
+ <a href="https://anku-2.github.io/portfolio/" target="_blank">GitHub</a></li>
+     
+      
+    </ol>
+    <h3>2) E-COMMERCE WEBSITE REDSEGIN</h3>
+    <ol>
+      <li>	Led the redesign of an e-commerce website, improving user experience and conversion rates.
+                                      •	Implemented a new checkout process using React and Redux for a seamless shopping experience.
+                                      •	Conducted A/B testing and analyzed user behavior to make data-driven design decisions.
+
+ <a href="https://github.com/anku-2/flipkart_clone" target="_blank">GitHub</a></li>
+     
+      </ol>
+
+      <h4>2) TRAVELING THE WORD:</h4>
+    <ol>
+      <li>Led end-to-end development of a dynamic traveling e-commerce platform, emphasizing user experience and conversion optimization.
+                                      •	Implemented responsive design and integrated payment gateways for secure transactions, enhancing usability across devices..
+ <a href="https://anku-2.github.io/travels-01/" target="_blank">GitHub</a></li>
+      
+      </ol>
+
+  `;
+  break;
+
+
+        case 'education':
+          info = `
+            <h2>1) Graduation </h2>
+            <ul>
+              <li>   Degree: BE pursuing</li><br>
+              <li>   Major:Mechanical</li><br>
+              <li>   University: Savitribai Phule Pune University</li><br>
+              <li>   Year of graduation: 2021-2024</li>
+            </ul>
+            <h3>2)  Diploma</h3>
+            <ul>
+              <li>  Major: Mechanical </li><br>
+              <li>  University: MSBT</li><br>
+              <li>  Year: 2018-2021</li>
+            </ul>
+          `;
+          break;
+        case 'certification':
+          info = `
+            <h2>Certifications</h2>
+            <ul>
+              <li>1)  Python from Ruibecon Workshop</li><br>
+              <li>2)  Front-end Development </li>
+              <li>2)  Full-stack Developer </li>
+             
+            </ul>
+          `;
+          break;
+        
+        case 'contact':
+          info = `
+            <h2>Contact Information</h2>
+            <ul>
+              <li>1)  Contact number: 8830372245</li><br>
+              <li>2)  Email: ankushnikam237@gmail.com</li>
+            </ul>
+          `;
+          break;
+        default:
+          info = '';
+      }
+      document.getElementById('infoContainer').innerHTML = info;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      showInfo('home');
+    });
+  </script>
+  <footer >
+     Copyright © 2024 web developer ankush. All rights reserved.
+  </footer>
+</body>
+</html>
